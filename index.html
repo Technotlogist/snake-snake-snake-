@@ -1,3 +1,71 @@
-window.onload = function() {
-    gameLoop();
-};
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TI-83 Snake</title>
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="calc-header">
+        <span id="calc-brand">TEXAS INSTRUMENTS</span>
+        <span id="calc-model">TI-83</span>
+        <div id="solar-panel"></div>
+      </div>
+      <div id="screen-bezel">
+        <div id="screen-container">
+          <canvas id="game-canvas"></canvas>
+        </div>
+        <div id="screen-label">LCD DISPLAY</div>
+      </div>
+      <div id="button-grid">
+        <div class="btn-row">
+          <button class="calc-btn gray" data-key="Escape">2ND</button>
+          <button class="calc-btn gray" data-key="Escape">MODE</button>
+          <button class="calc-btn gray">DEL</button>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn gray">ALPHA</button>
+          <button class="calc-btn dark">X,T,θ,n</button>
+          <button class="calc-btn dark">STAT</button>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn dark">MATH</button>
+          <button class="calc-btn dark">MATRIX</button>
+          <button class="calc-btn dark">PRGM</button>
+          <button class="calc-btn dark">VARS</button>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn dark">CLEAR</button>
+          <button class="calc-btn dark">x⁻¹</button>
+          <button class="calc-btn dark">SIN</button>
+          <button class="calc-btn dark">COS</button>
+          <button class="calc-btn dark">TAN</button>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn dark">^</button>
+          <button class="calc-btn dark">x²</button>
+          <button class="calc-btn dark">,</button>
+          <button class="calc-btn dark">(</button>
+          <button class="calc-btn dark">)</button>
+        </div>
+        <div class="btn-row nav-row">
+          <div class="nav-grid">
+            <button class="calc-btn white nav-btn" id="btn-up" data-key="ArrowUp">▲</button>
+            <button class="calc-btn white nav-btn" id="btn-left" data-key="ArrowLeft">◄</button>
+            <button class="calc-btn white nav-btn" id="btn-right" data-key="ArrowRight">►</button>
+            <button class="calc-btn white nav-btn" id="btn-down" data-key="ArrowDown">▼</button>
+            <div class="nav-center"></div>
+          </div>
+        </div>
+        <div class="btn-row">
+          <button class="calc-btn blue" id="btn-enter" data-key="Enter">ENTER</button>
+        </div>
+      </div>
+      <div id="calc-bottom">
+        <div id="brand-text">©2024 TI SNAKE EDITION</div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
